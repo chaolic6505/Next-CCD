@@ -1,8 +1,8 @@
 export default {
-    providers: [
-      {
-        domain: "https://tidy-elf-32.clerk.accounts.dev",
-        applicationID: "convex",
-      },
-    ]
-  };
+	providers: [
+		{
+			domain: "https://thorough-chipmunk-63.clerk.accounts.dev",
+			applicationID: "convex",
+		},
+	],
+};
