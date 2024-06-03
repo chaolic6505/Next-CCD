@@ -2,18 +2,17 @@
 
 import Link from "next/link";
 import Image from "next/image";
-
 import { Authenticated } from "convex/react";
 import { OrganizationSwitcher } from "@clerk/nextjs";
 
-import { HeaderActions } from "./header-actions";
+import HeaderActions from "./HeaderActions";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 
 const header = {
 	title: "Chao Chao Dog",
 };
 
-export function Header() {
+const Header = () => {
 	return (
 		<div className='z-10 relative dark:bg-slate-900 bg-slate-50 py-4'>
 			<div className='container mx-auto flex justify-between items-center'>
@@ -54,4 +53,6 @@ export function Header() {
 			</div>
 		</div>
 	);
-}
+};
+
+export default Header;

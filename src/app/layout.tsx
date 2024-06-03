@@ -2,8 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 
+import Header from "./Header";
 import { cn } from "@/lib/utils";
-import { Header } from "./header";
 import { Providers } from "./providers";
 import { Toaster } from "@/components/ui/toaster";
 
