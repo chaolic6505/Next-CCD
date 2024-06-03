@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 
 import { cn } from "@/lib/utils";
-import { Header } from "@/app/header";
+import { Header } from "./header";
 import { Providers } from "./providers";
 import { Toaster } from "@/components/ui/toaster";
 
