@@ -1,13 +1,14 @@
 "use client";
 
-import { useQuery } from "convex/react";
-import { DocumentCard } from "@/components/DocumentCard";
-import { api } from "../../../../convex/_generated/api";
-import CreateDocumentButton from "@/components/UploadDocumentButton";
-import { Skeleton } from "@/components/ui/skeleton";
-import { Card } from "@/components/ui/card";
 import Image from "next/image";
+import { useQuery } from "convex/react";
 import { useOrganization } from "@clerk/nextjs";
+
+import { api } from "../../../../convex/_generated/api";
+import { Card } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
+import { DocumentCard } from "@/components/DocumentCard";
+import CreateDocumentButton from "@/components/UploadDocumentButton";
 
 export default function Home() {
   const organization = useOrganization();
