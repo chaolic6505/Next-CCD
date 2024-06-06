@@ -6,13 +6,13 @@ import { Authenticated, Unauthenticated, AuthLoading } from "convex/react";
 const HeaderActions = () => {
   return (
     <>
-      {/* <Unauthenticated>
-				<SignInButton />
-			</Unauthenticated>
+      <Unauthenticated>
+        <SignInButton />
+      </Unauthenticated>
 
-			<Authenticated>
-				<UserButton />
-			</Authenticated> */}
+      <Authenticated>
+        <UserButton />
+      </Authenticated>
 
       <AuthLoading>Loading...</AuthLoading>
     </>

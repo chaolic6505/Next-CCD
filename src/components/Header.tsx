@@ -14,15 +14,15 @@ const header = {
 
 const Header = () => {
   return (
-    <div className="z-10 relative dark:bg-indigo-950 bg-slate-100 py-4">
+    <div className="z-10 relative py-4 light: dark:bg-slate-800">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex gap-8 items-center">
           <ModeToggle />
           <Link href="/" className="flex items-center gap-4 text-2xl">
             <Image
-              src="/logo.png"
               width={40}
               height={40}
+              src="/logo.png"
               className="rounded"
               alt="an image of a brain"
             />

@@ -8,31 +8,33 @@ import { Toaster } from "@/components/ui/toaster";
 import { Providers } from "@/providers/providers";
 
 const fontSans = FontSans({
-	subsets: ["latin"],
-	variable: "--font-sans",
+  subsets: ["latin"],
+  variable: "--font-sans",
 });
 export const metadata: Metadata = {
-	title: "Chao Chao Dog",
-	description: "Chao Chao Dog",
+  title: "Chao Chao Dog",
+  description: "Chao Chao Dog",
 };
 
 export default function RootLayout({
-	children,
+  children,
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-	return (
-		<html
-			lang='en'
-			suppressHydrationWarning
-		>
-			<body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
-				<Providers>
-					<Header />
-					{children}
-					<Toaster />
-				</Providers>
-			</body>
-		</html>
-	);
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={cn(
+          "min-h-screen font-sans antialiased dark:bg-slate-800 ",
+          fontSans.variable,
+        )}
+      >
+        <Providers>
+          <Header />
+          {children}
+          <Toaster />
+        </Providers>
+      </body>
+    </html>
+  );
 }
