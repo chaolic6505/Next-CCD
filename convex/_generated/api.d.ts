@@ -14,6 +14,7 @@ import type {
   FilterApi,
   FunctionReference,
 } from "convex/server";
+import type * as documents from "../documents.js";
 import type * as form_fields from "../form_fields.js";
 import type * as form_responses from "../form_responses.js";
 import type * as forms from "../forms.js";
@@ -27,6 +28,7 @@ import type * as forms from "../forms.js";
  * ```
  */
 declare const fullApi: ApiFromModules<{
+  documents: typeof documents;
   form_fields: typeof form_fields;
   form_responses: typeof form_responses;
   forms: typeof forms;

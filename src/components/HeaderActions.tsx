@@ -4,9 +4,9 @@ import { SignInButton, UserButton } from "@clerk/nextjs";
 import { Authenticated, Unauthenticated, AuthLoading } from "convex/react";
 
 const HeaderActions = () => {
-	return (
-		<>
-			{/* <Unauthenticated>
+  return (
+    <>
+      {/* <Unauthenticated>
 				<SignInButton />
 			</Unauthenticated>
 
@@ -14,8 +14,9 @@ const HeaderActions = () => {
 				<UserButton />
 			</Authenticated> */}
 
-			<AuthLoading>Loading...</AuthLoading>
-		</>
-	);
+      <AuthLoading>Loading...</AuthLoading>
+    </>
+  );
 };
+
 export default HeaderActions;
