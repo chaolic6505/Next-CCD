@@ -30,9 +30,11 @@ export default function RootLayout({
         )}
       >
         <Providers>
+        <div className="grid h-screen grid-rows-[auto,1fr]">
           <Header />
           {children}
           <Toaster />
+        </div>
         </Providers>
       </body>
     </html>

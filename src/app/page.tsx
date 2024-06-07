@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
+import { Card, CardHeader, CardContent } from "@/components/ui/card"
+
 //import { getMyImages } from "~/server/queries";
 
 export const dynamic = "force-dynamic";
@@ -20,21 +22,40 @@ const mockImages = urls.map((url, index) => ({
 
 async function Images() {
   return (
-    <div className="flex flex-wrap justify-center gap-4 p-4 mt-2">
-      {mockImages.map((image, index) => (
-        <div key={index} className="flex h-48 w-48 flex-col">
-          <Link href={`/img/${index}`}>
-            <Image
-              width={192}
-              height={192}
-              alt={image.url}
-              src={image.url}
-              style={{ objectFit: "contain" }}
-            />
+    <main className="grid sm:grid-cols-3 gap-4 w-full max-w-1xl mx-auto p-4">
+      {mockImages.map((image) => (
+      <Card>
+      <CardHeader>
+        <img
+          alt="Image 1"
+          src={image.url}
+          className="aspect-square object-cover border border-gray-200 w-full rounded-lg overflow-hidden dark:border-gray-800"
+        />
+      </CardHeader>
+      <CardContent>
+        <h2 className="text-lg font-bold">Image 1</h2>
+        <p className="text-gray-600">Image 1 description</p>
+        <div className="flex items-center space-x-2 mt-2">
+
+          <Link href="#" className="text-blue-500 hover:underline" prefetch={false}>
+            View more
           </Link>
         </div>
+      </CardContent>
+    </Card>
+        // <div key={image.id} className="flex h-48 w-48 flex-col">
+        //   <Link href={`/img/${image.id}`}>
+        //     <Image
+        //       width={192}
+        //       height={192}
+        //       alt={image.url}
+        //       src={image.url}
+        //       style={{ objectFit: "contain" }}
+        //     />
+        //   </Link>
+        // </div>
       ))}
-    </div>
+    </main>
   );
 }
 
