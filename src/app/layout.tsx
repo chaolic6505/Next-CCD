@@ -1,6 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import { cn } from "@/lib/utils";
 import Header from "@/components/Header";
@@ -33,6 +35,8 @@ export default function RootLayout({
         <div className="grid h-screen grid-rows-[auto,1fr]">
           <Header />
           {children}
+          <Analytics />
+          <SpeedInsights />
           <Toaster />
         </div>
         </Providers>
