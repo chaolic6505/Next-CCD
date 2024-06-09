@@ -18,6 +18,19 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex gap-8 items-center">
           <ModeToggle />
+        </div>
+
+        <div className="flex gap-4 items-center">
+          <nav className="flex items-center gap-8">
+            {/* <OrganizationSwitcher /> */}
+
+            <Authenticated>
+              <Link href="/dashboard" className="hover:underline">
+                Dashboard
+              </Link>
+            </Authenticated>
+          </nav>
+          <HeaderActions />
           <Link href="/" className="flex items-center gap-4 text-2xl">
             <Image
               width={40}
@@ -26,21 +39,7 @@ const Header = () => {
               className="rounded"
               alt="an image of a brain"
             />
-            {header.title}
           </Link>
-        </div>
-
-        <div className="flex gap-4 items-center">
-          <nav className="flex items-center gap-8">
-            {/* <OrganizationSwitcher /> */}
-
-            <Authenticated>
-              <Link href="/dashboard" className="hover:text-slate-300">
-                Dashboard
-              </Link>
-            </Authenticated>
-          </nav>
-          <HeaderActions />
         </div>
       </div>
     </div>

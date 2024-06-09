@@ -18,6 +18,7 @@ import type * as documents from "../documents.js";
 import type * as form_fields from "../form_fields.js";
 import type * as form_responses from "../form_responses.js";
 import type * as forms from "../forms.js";
+import type * as image from "../image.js";
 
 /**
  * A utility for referencing Convex functions in your app's API.
@@ -32,6 +33,7 @@ declare const fullApi: ApiFromModules<{
   form_fields: typeof form_fields;
   form_responses: typeof form_responses;
   forms: typeof forms;
+  image: typeof image;
 }>;
 export declare const api: FilterApi<
   typeof fullApi,

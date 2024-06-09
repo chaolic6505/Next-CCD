@@ -67,7 +67,7 @@ export const update = mutation({
         .filter((q) => q.eq(q.field("createdBy"), identity.tokenIdentifier))
         .collect();
         const sameNameForms = formsOfThisUser.filter((f) => f.name === args.name.trim());
-        
+
         if (sameNameForms.length > 0 && sameNameForms[0]._id !== args.formId) {
             throw new ConvexError("Form with this name already exists");
         }

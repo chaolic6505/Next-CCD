@@ -1,6 +1,7 @@
 import { v } from "convex/values";
 import { defineSchema, defineTable } from "convex/server";
 
+
 export default defineSchema({
   forms: defineTable({
     createdBy: v.string(),
@@ -58,4 +59,10 @@ export default defineSchema({
     isHuman: v.boolean(),
     text: v.string(),
   }).index("by_documentId_tokenIdentifier", ["documentId", "tokenIdentifier"]),
+  image: defineTable({
+    url: v.string(),
+    name: v.string(),
+    userId: v.string(),
+    updated: v.string(),
+  }),
 });

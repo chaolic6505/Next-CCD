@@ -2,7 +2,7 @@ import { sql } from "drizzle-orm";
 import { serial, index, integer, text, boolean, varchar, timestamp, pgTable } from "drizzle-orm/pg-core";
 
 export const userTable = pgTable('user', {
-    id: varchar('id').primaryKey(),
+    id: integer('id').primaryKey(),
     name: text('name').notNull(),
     age: integer('age').notNull(),
     email: text('email').notNull().unique(),
@@ -12,10 +12,11 @@ export const imageTable = pgTable("image", {
     id: integer("id").primaryKey(),
     url: varchar("url", { length: 1024 }).notNull(),
     name: varchar("name", { length: 256 }).notNull(),
+    userId: varchar("userId", { length: 256 }).notNull(),
 
     createdAt: timestamp("created_at")
     .notNull()
-    .default(sql`now()`),
+    .defaultNow(),
     updatedAt: timestamp("updatedAt")
     .$onUpdate(() => new Date()),
   },
