@@ -20,7 +20,7 @@ export default function DocumentPage({
   });
 
   return (
-    <main className="space-y-8 w-full">
+    <article className="space-y-8 w-full">
       {!document && (
         <div className="space-y-8">
           <div>
@@ -66,6 +66,6 @@ export default function DocumentPage({
           </div>
         </>
       )}
-    </main>
+    </article>
   );
 }

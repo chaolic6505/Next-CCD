@@ -18,7 +18,7 @@ export default function Home() {
   });
 
   return (
-    <main className="w-full space-y-8">
+    <view className="w-full space-y-8">
       <div className="flex justify-between items-center">
         <h1 className="text-4xl font-bold">My Documents</h1>
         <CreateDocumentButton />
@@ -58,6 +58,6 @@ export default function Home() {
           {documents?.map((doc) => <DocumentCard document={doc} />)}
         </div>
       )}
-    </main>
+    </view>
   );
 }
