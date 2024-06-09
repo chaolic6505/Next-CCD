@@ -12,9 +12,9 @@ const convex = new ConvexReactClient(process.env.NEXT_PUBLIC_CONVEX_URL as strin
 export function Providers({ children }: { children: React.ReactNode }) {
 	return (
 		<ThemeProvider
+            enableSystem
 			attribute='class'
-			defaultTheme='system'
-			enableSystem
+			defaultTheme='light'
 			disableTransitionOnChange
 		>
 			<OtherProviders>{children}</OtherProviders>
@@ -27,10 +27,8 @@ function OtherProviders({ children }: { children: React.ReactNode }) {
 
 	return (
 		<ClerkProvider
-			appearance={{
-				baseTheme: resolvedTheme === "dark" ? dark : undefined,
-			}}
-			publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+            publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+            // appearance={{ baseTheme: resolvedTheme === "dark" ? dark : undefined }}
 		>
 			<ConvexProviderWithClerk
 				client={convex}

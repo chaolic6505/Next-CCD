@@ -14,7 +14,7 @@ const header = {
 
 const Header = () => {
   return (
-    <div className="z-10 relative py-4 light: dark:bg-slate-800">
+    <div className="z-10 relative py-4">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex gap-8 items-center">
           <ModeToggle />

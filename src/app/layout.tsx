@@ -20,25 +20,25 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen font-sans antialiased dark:bg-slate-800 ",
-          fontSans.variable,
+          "min-h-screen font-sans antialiased bg-white dark:bg-black",
+          fontSans.variable
         )}
       >
         <Providers>
-        <div className="grid h-screen grid-rows-[auto,1fr]">
-          <Header />
-          {children}
-          <Analytics />
-          <SpeedInsights />
-          <Toaster />
-        </div>
+          <div className="grid h-screen grid-rows-[auto,1fr]">
+            <Header />
+            {children}
+            <Analytics />
+            <SpeedInsights />
+            <Toaster />
+          </div>
         </Providers>
       </body>
     </html>
