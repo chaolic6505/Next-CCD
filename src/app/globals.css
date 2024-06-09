@@ -4,13 +4,13 @@
 
 @layer base {
   :root {
-    --background: hsl(0, 0%, 100%);
+    --background: #CCD0CF;
     --foreground: hsl(222.2, 84%, 4.9%);
 
-    --card: hsl(0, 0%, 100%);
+    --card: #CCD0CF;
     --card-foreground: hsl(222.2, 84%, 4.9%);
 
-    --popover: hsl(0, 0%, 100%);
+    --popover: #CCD0CF;
     --popover-foreground: hsl(222.2, 84%, 4.9%);
 
     --primary: hsl(222.2, 47.4%, 11.2%);
@@ -36,13 +36,13 @@
   }
 
   .dark {
-    --background: hsl(222.2, 84%, 4.9%);
+    --background: #11212D;
     --foreground: hsl(210, 40%, 98%);
 
-    --card: hsl(222.2, 84%, 4.9%);
+    --card: #11212D;
     --card-foreground: hsl(210, 40%, 98%);
 
-    --popover: hsl(222.2, 84%, 4.9%);
+    --popover: #11212D;
     --popover-foreground: hsl(210, 40%, 98%);
 
     --primary: hsl(210, 40%, 98%);
