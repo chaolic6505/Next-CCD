@@ -27,9 +27,9 @@ async function Images() {
       <Card>
       <CardHeader>
         <img
-          alt="Image 1"
-          src={image.url}
-          className="aspect-square object-cover border border-gray-200 w-full rounded-lg overflow-hidden dark:border-gray-800"
+            alt="Image 1"
+            src={image.url}
+            className="aspect-square object-cover border border-gray-200 w-full rounded-lg overflow-hidden dark:border-gray-800"
         />
       </CardHeader>
       <CardContent>
@@ -43,17 +43,6 @@ async function Images() {
         </div>
       </CardContent>
     </Card>
-        // <div key={image.id} className="flex h-48 w-48 flex-col">
-        //   <Link href={`/img/${image.id}`}>
-        //     <Image
-        //       width={192}
-        //       height={192}
-        //       alt={image.url}
-        //       src={image.url}
-        //       style={{ objectFit: "contain" }}
-        //     />
-        //   </Link>
-        // </div>
       ))}
     </main>
   );
