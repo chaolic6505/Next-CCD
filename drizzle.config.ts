@@ -6,10 +6,12 @@ dotenv.config({
 });
 
 export default defineConfig({
+    driver:"turso",
     out: "./drizzle",
-    dialect: "postgresql",
-    schema: "./src/db/schema.ts",
+    dialect: "sqlite",
+    schema: "./src/db/schema/*.ts",
     dbCredentials: {
         url: process.env.DATABASE_URL!,
+        authToken: process.env.DATABASE_AUTH_TOKEN!,
     },
 });

@@ -63,6 +63,6 @@ export default defineSchema({
     url: v.string(),
     name: v.string(),
     userId: v.string(),
-    updated: v.string(),
+    updated: v.optional(v.string()),
   }),
 });

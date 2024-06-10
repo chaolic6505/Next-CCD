@@ -1,39 +1,39 @@
+import { uploadImage } from "@/db/queries/image";
 import { UploadThingError } from "uploadthing/server";
 import { auth, clerkClient } from "@clerk/nextjs/server";
 import { createUploadthing, type FileRouter } from "uploadthing/next";
-import db from "@/db/drizzle";
-import { imageTable } from "@/db/schema";
-import { uuid } from "drizzle-orm/pg-core";
-//import { ratelimit } from "~/server/ratelimit";
 
+import { generateRandomString } from "@/lib/utils";
 const f = createUploadthing();
 
 export const ourFileRouter = {
-  imageUploader: f({ image: { maxFileSize: "4MB", maxFileCount: 40 } })
+  imageUploader: f({ image: { maxFileSize: "2MB", maxFileCount: 1 } })
     .middleware(async ({ req }) => {
       const user = auth();
       if (!user.userId) throw new UploadThingError("Unauthorized");
+      if (user.userId !== 'user_2gfs8voqQwlIuXC4cuu5ugMtfrj') throw new UploadThingError("Unauthorized");
 
       const fullUserData = await clerkClient.users.getUser(user.userId);
 
-      if (fullUserData?.privateMetadata?.["can-upload"] !== true)
-        throw new UploadThingError("User Does Not Have Upload Permissions");
+    //   if (fullUserData?.privateMetadata?.["can-upload"] !== true)
+    //     throw new UploadThingError("User Does Not Have Upload Permissions");
 
     //   const { success } = await ratelimit.limit(user.userId);
     //   if (!success) throw new UploadThingError("Ratelimited");
 
       return { userId: user.userId };
-    })
-    .onUploadComplete(async ({ metadata, file }) => {
-        const user = auth();
-      await db.insert(imageTable).values({
-        id: user.userId,
-        url: file.url,
-        name: file.name,
-        userId: metadata.userId,
-      });
+      })
+      .onUploadComplete(async ({ metadata, file }) => {
+        const id = generateRandomString(16);
+console.log('metadata', metadata);
+        await uploadImage({
+            id: id,
+            url: file.url,
+            userId: metadata.userId,
+            description: 'test file name',
+        });
 
-      return { uploadedBy: metadata.userId };
+        return { url: file.url };
     }),
 } satisfies FileRouter;
 
