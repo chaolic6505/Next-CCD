@@ -1633,8 +1633,8 @@ packages:
     resolution: {integrity: sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==}
     engines: {node: '>= 6'}
 
-  caniuse-lite@1.0.30001629:
-    resolution: {integrity: sha512-c3dl911slnQhmxUIT4HhYzT7wnBK/XYpGnYLOj4nJBaRiw52Ibe7YxlDaAeRECvA786zCuExhxIUJ2K7nHMrBw==}
+  caniuse-lite@1.0.30001632:
+    resolution: {integrity: sha512-udx3o7yHJfUxMLkGohMlVHCvFvWmirKh9JAH/d7WOLPetlH+LTL5cocMZ0t7oZx/mdlOWXti97xLZWc8uURRHg==}
 
   chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
@@ -1912,8 +1912,8 @@ packages:
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
 
-  effect@3.3.0:
-    resolution: {integrity: sha512-EH1tbk+H5uMTU38uqAXVy0+2g5QqTY68C3Imo5WSWIcyjCiPS96nBh9Ms2kjKn/i14Rn1dBNoHfsR6Nfne4L3w==}
+  effect@3.3.1:
+    resolution: {integrity: sha512-MP6W5NKSEgsQWgTZcLXTPu6sDjCO3Rqi9NFdYUBjlUZ1poCclLgzUerSVVnymE1oYBG1/7Ix82LpBp7EB5Lxmw==}
 
   electron-to-chromium@1.4.796:
     resolution: {integrity: sha512-NglN/xprcM+SHD2XCli4oC6bWe6kHoytcyLKCWXmRL854F0qhPhaYgUswUsglnPxYaNQIg2uMY4BvaomIf3kLA==}
@@ -2531,8 +2531,8 @@ packages:
     resolution: {integrity: sha512-utWOt/GHzuUxnLKxB6dk81RoOeoNeHgbrXiuGk4yyF5qlRz+iIVWu56E2fqGHFrXz0QNUhLB/8nKqvRH66JKGQ==}
     engines: {node: '>=10'}
 
-  lilconfig@3.1.1:
-    resolution: {integrity: sha512-O18pf7nyvHTckunPWCV1XUNXU1piu01y2b7ATJ0ppkUkk8ocqVWBrYjJBCwHDjD/ZWcfyrA0P4gKhzWGi5EINQ==}
+  lilconfig@3.1.2:
+    resolution: {integrity: sha512-eop+wDAvpItUys0FWkHIKeC9ybYrTGbU41U5K7+bttZZeohvnY7M9dZ5kB21GNWiFT2q1OoPTvncPCgSOVO5ow==}
     engines: {node: '>=14'}
 
   lines-and-columns@1.2.4:
@@ -3723,9 +3723,9 @@ snapshots:
     dependencies:
       csstype: 3.1.1
 
-  '@effect/schema@0.66.16(effect@3.3.0)(fast-check@3.19.0)':
+  '@effect/schema@0.66.16(effect@3.3.1)(fast-check@3.19.0)':
     dependencies:
-      effect: 3.3.0
+      effect: 3.3.1
       fast-check: 3.19.0
 
   '@esbuild-kit/core-utils@3.3.2':
@@ -4647,7 +4647,7 @@ snapshots:
   '@uploadthing/shared@6.7.5':
     dependencies:
       '@uploadthing/mime-types': 0.2.10
-      effect: 3.3.0
+      effect: 3.3.1
       std-env: 3.7.0
 
   '@vercel/analytics@1.3.1(next@14.2.3(@babel/core@7.24.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
@@ -4815,7 +4815,7 @@ snapshots:
 
   browserslist@4.23.1:
     dependencies:
-      caniuse-lite: 1.0.30001629
+      caniuse-lite: 1.0.30001632
       electron-to-chromium: 1.4.796
       node-releases: 2.0.14
       update-browserslist-db: 1.0.16(browserslist@4.23.1)
@@ -4838,7 +4838,7 @@ snapshots:
 
   camelcase-css@2.0.1: {}
 
-  caniuse-lite@1.0.30001629: {}
+  caniuse-lite@1.0.30001632: {}
 
   chalk@2.4.2:
     dependencies:
@@ -5027,7 +5027,7 @@ snapshots:
 
   eastasianwidth@0.2.0: {}
 
-  effect@3.3.0: {}
+  effect@3.3.1: {}
 
   electron-to-chromium@1.4.796: {}
 
@@ -5235,7 +5235,7 @@ snapshots:
       eslint: 9.4.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@7.2.0(eslint@9.4.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@9.4.0))(eslint@9.4.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@9.4.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@9.4.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@9.4.0))(eslint@9.4.0))(eslint@9.4.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@9.4.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1)(eslint@9.4.0)
       eslint-plugin-jsx-a11y: 6.8.0(eslint@9.4.0)
       eslint-plugin-react: 7.34.2(eslint@9.4.0)
       eslint-plugin-react-hooks: 4.6.2(eslint@9.4.0)
@@ -5263,7 +5263,7 @@ snapshots:
       enhanced-resolve: 5.17.0
       eslint: 9.4.0
       eslint-module-utils: 2.8.1(@typescript-eslint/parser@7.2.0(eslint@9.4.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@9.4.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@9.4.0))(eslint@9.4.0))(eslint@9.4.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@9.4.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@9.4.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@9.4.0))(eslint@9.4.0))(eslint@9.4.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@9.4.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1)(eslint@9.4.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.7.5
       is-core-module: 2.13.1
@@ -5289,7 +5289,7 @@ snapshots:
     dependencies:
       eslint: 9.4.0
 
-  eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.2.0(eslint@9.4.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@9.4.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@9.4.0))(eslint@9.4.0))(eslint@9.4.0):
+  eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.2.0(eslint@9.4.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1)(eslint@9.4.0):
     dependencies:
       array-includes: 3.1.8
       array.prototype.findlastindex: 1.2.5
@@ -5834,7 +5834,7 @@ snapshots:
 
   lilconfig@2.1.0: {}
 
-  lilconfig@3.1.1: {}
+  lilconfig@3.1.2: {}
 
   lines-and-columns@1.2.4: {}
 
@@ -5926,7 +5926,7 @@ snapshots:
       '@next/env': 14.2.3
       '@swc/helpers': 0.5.5
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001629
+      caniuse-lite: 1.0.30001632
       graceful-fs: 4.2.11
       postcss: 8.4.31
       react: 18.3.1
@@ -6091,7 +6091,7 @@ snapshots:
 
   postcss-load-config@4.0.2(postcss@8.4.38):
     dependencies:
-      lilconfig: 3.1.1
+      lilconfig: 3.1.2
       yaml: 2.4.5
     optionalDependencies:
       postcss: 8.4.38
@@ -6638,11 +6638,11 @@ snapshots:
 
   uploadthing@6.12.0(next@14.2.3(@babel/core@7.24.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(tailwindcss@3.4.3):
     dependencies:
-      '@effect/schema': 0.66.16(effect@3.3.0)(fast-check@3.19.0)
+      '@effect/schema': 0.66.16(effect@3.3.1)(fast-check@3.19.0)
       '@uploadthing/mime-types': 0.2.10
       '@uploadthing/shared': 6.7.5
       consola: 3.2.3
-      effect: 3.3.0
+      effect: 3.3.1
       fast-check: 3.19.0
       std-env: 3.7.0
     optionalDependencies:
