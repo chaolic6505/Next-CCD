@@ -1,8 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { cn } from "@/lib/utils";
 import Header from "@/components/Header";
@@ -28,7 +28,7 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen font-sans antialiased bg-[#CCD0CF] dark:bg-[#11212D]",
-          fontSans.variable
+          fontSans.variable,
         )}
       >
         <Providers>

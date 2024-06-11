@@ -1,3 +1,5 @@
+import 'server-only';
+
 import db from '../drizzle';
 import { desc } from 'drizzle-orm';
 import { imageTable, InsertImage } from '../schema/image';

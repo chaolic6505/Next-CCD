@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 import {
@@ -13,7 +14,7 @@ import {
 import ImageSkeleton from "./ImageSkeleton";
 
 export default function ImagesCard() {
-  const images = useQuery(api.image.getImages, {});
+  const images = useQuery(api.image.getImages);
 
   return (
     <div className="grid sm:grid-cols-3 gap-4 w-full max-w-1xl mx-auto p-4">
@@ -22,14 +23,16 @@ export default function ImagesCard() {
         ? images?.map((image) => (
             <Card key={image._id}>
               <CardHeader>
-                <img
+                <Image
+                  width={300}
+                  height={700}
                   src={image.url}
                   alt={image.url}
                   className="aspect-square object-cover border border-gray-200 w-full rounded-lg overflow-hidden dark:border-gray-800"
                 />
               </CardHeader>
+
               <CardContent>
-                <h6 className="text-lg font-bold">{image._id}</h6>
                 <CardDescription>{image.name}</CardDescription>
                 <div className="flex items-center space-x-2 mt-2">
                   <Link
