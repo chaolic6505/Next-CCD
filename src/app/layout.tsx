@@ -10,36 +10,40 @@ import { Toaster } from "@/components/ui/toaster";
 import { Providers } from "@/providers/providers";
 
 const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
+	subsets: ["latin"],
+	variable: "--font-sans",
 });
 export const metadata: Metadata = {
-  title: "Chao Chao Dog",
-  description: "Chao Chao Dog",
+	title: "Chao Chao Dog",
+	description: "Chao Chao Dog",
 };
 
 export default function RootLayout({
-  children,
+	children,
+	modal,
 }: {
-  children: React.ReactNode;
+	children: React.ReactNode;
+	modal?: React.ReactNode;
 }) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(
-          "min-h-screen font-sans antialiased bg-[#CCD0CF] dark:bg-[#11212D]",
-          fontSans.variable,
-        )}
-      >
-        <Providers>
-          <div className="grid h-screen grid-rows-[auto,1fr]">
-            {children}
-            <Analytics />
-            <SpeedInsights />
-            <Toaster />
-          </div>
-        </Providers>
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en" suppressHydrationWarning>
+			<body
+				className={cn(
+					"min-h-screen font-sans antialiased bg-[#CCD0CF] dark:bg-[#11212D]",
+					fontSans.variable,
+				)}
+			>
+				<Providers>
+					<div className="grid h-screen grid-rows-[auto,1fr]">
+						{children}
+						{modal}
+						<div id="modal-root" />
+						<Analytics />
+						<SpeedInsights />
+						<Toaster />
+					</div>
+				</Providers>
+			</body>
+		</html>
+	);
 }

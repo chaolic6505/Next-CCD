@@ -67,6 +67,7 @@ export default defineSchema({
 		userId: v.string(),
 		name: v.optional(v.string()),
 		updated: v.optional(v.string()),
+		archived: v.optional(v.boolean()),
 		description: v.optional(v.string()),
 	}),
 });
